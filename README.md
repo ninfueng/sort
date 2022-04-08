@@ -1,11 +1,7 @@
 SORT
 =====
 
-## Note
-
-======================================================================
 **This is a forked version from [SORT](https://github.com/abewley/sort).**
-======================================================================
 
 A simple online and realtime tracking algorithm for 2D multiple object tracking in video sequences.
 See an example [video here](https://alex.bewley.ai/misc/SORT-MOT17-06-FRCNN.webm).
