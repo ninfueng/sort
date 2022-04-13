@@ -36,11 +36,8 @@ def linear_assignment(cost_matrix):
         # RISC-V Assembly seems to works with 2x2 cost matrix only.
         # Use RISC-V when the shape == (2, 2), otherwise using software.
         cost_matrix = to_int_max(cost_matrix).reshape(-1).tolist()
-        hw_flag, (x, y) = run_riscv(cost_matrix)
-        if not hw_flag:
-            x, y = linear_sum_assignment(cost_matrix)
-        else:
-            print("Using RISC-V Hungarian algorithm")
+        x, y = run_riscv(cost_matrix)
+        print("Using RISC-V Hungarian algorithm")
         return np.array(list(zip(x, y)))
     else:
         x, y = linear_sum_assignment(cost_matrix)
