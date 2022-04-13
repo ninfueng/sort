@@ -19,7 +19,7 @@
 import numpy as np
 from filterpy.kalman import KalmanFilter
 from scipy.optimize import linear_sum_assignment
-from utils import run_riscv
+from .utils import run_riscv
 
 np.random.seed(0)
 
